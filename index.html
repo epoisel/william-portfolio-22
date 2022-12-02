@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+    <title>Pure CSS Parallax Effect</title>
+  </head>
+  <body>
+	<main>
+		<section class="parallax bg">
+			<h1 class="intro">
+				My names William
+				<p></p>
+				I am a graphic designer/web developer
+				<p></p>
+				and this is my work
+			</h1>
+		  </section>
+		<section class="no-parallax">
+		<div class="np-child">
+		  <img class="gif" src="../william-portfolio-master/headshot2.gif">
+		  </div>
+		  <div>
+		  <h2 class="qt">
+			Art is 
+			<br>
+			never finished 
+			<br>
+			only abandoned.</h2>
+		</div>
+		</section>
+		
+		
+		<section class="parallax bg2">
+			<div class="cards-list">
+  
+				<div class="card 1 trigger">
+				  <div class="card_image"> <img src="gt-cover.png" /> </div>
+				  <div class="card_title title-white">
+					<p>Guerrilla Thrift Catalog</p>
+				  </div>
+				</div>
+				<!-- card 1 modal -->
+				<div class="modal">
+					<div class="modal-content">
+						<span class="close-button">&times;</span>
+						<div class="gallery">
+							<div class="gallery__column">
+								<a href="https://indd.adobe.com/embed/9c6c3348-fbd2-4482-9d5b-82900ae08a9d?startpage=1&allowFullscreen=true" target="_blank" class="gallery__link">
+									<figure class="gallery__thumb">
+										<img src="gt-cover.png" width="500px" alt="GT-catalog-cover" class="gallery__image">
+									</a>
+									</figure>
+							</div>
+				</div>
+				</div>
+				</div>
+				<!-- card 1 modal end -->
+				<div class="card 2 trigger2">
+					<div class="card_image"> <img src="Nun.jpg" /> </div>
+					<div class="card_title title-white">
+					  <p>Hexeater Clothing</p>
+					</div>
+				  </div>
+				  <!-- card 2 modal -->
+				  <div class="modal2">
+					  <div class="modal-content2">
+						  <span class="close-button">&times;</span>
+						  <div class="gallery2">
+							  <div class="gallery__column2">
+								  <a href="https://indd.adobe.com/embed/9c6c3348-fbd2-4482-9d5b-82900ae08a9d?startpage=1&allowFullscreen=true" target="_blank" class="gallery__link">
+									  <figure class="gallery__thumb">
+										  <img src="gt-cover.png" width="250px" alt="Portrait by Jessica Felicio" class="gallery__image">
+										  <img src="gt-cover.png" width="250px" alt="Portrait by Jessica Felicio" class="gallery__image">
+									  </a>
+									  </figure>
+							  </div>
+				  </div>
+				  </div>
+				  </div>
+				<!-- card 2 modal end -->
+				<div class="card 3">
+				  <div class="card_image">
+					<img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
+				  </div>
+				  <div class="card_title">
+					<p>Card Title</p>
+				  </div>
+				</div>
+				  
+				  <div class="card 4">
+				  <div class="card_image">
+					<img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
+					</div>
+				  <div class="card_title title-black">
+					<p>Card Title</p>
+				  </div>
+				  </div>
+				
+				</div>
+		</section>
+		<section class="no-parallax">
+		  <h1>Have a nice day!</h1>
+		</section>
+	  </main>
+	  <script>	const modal = document.querySelector(".modal");
+		const trigger = document.querySelector(".trigger");
+		const trigger2 = document.querySelector(".trigger2");
+		const closeButton = document.querySelector(".close-button");
+		
+		
+
+		function toggleModal() {
+			modal.classList.toggle("show-modal");
+		}
+		
+		function windowOnClick(event) {
+			if (event.target === modal) {
+				toggleModal();
+			}
+			
+			
+		}
+		
+		trigger.addEventListener("click", toggleModal);
+		trigger2.addEventListener("click", toggleModal);
+		closeButton.addEventListener("click", toggleModal);
+		window.addEventListener("click", windowOnClick);
+		</script>
+	  
+  </body>
+</html>
